@@ -12,13 +12,10 @@ var Letter = require("./letter");
 var currentWord = "Happy";
 var wordSplit = currentWord.split("");
 console.log(wordSplit[3]);
-var p = new Letter(wordSplit[3]);
-console.log(p);
+
 
 var Word = function () {
-    this.letters = [wordSplit.forEach(function(element){
-        // new Letter(element);
-    })];
+    this.letters = wordSplit.map(x => new Letter(x));
     // this.wordString = function (){
     //     letters.forEach(function(element) {
     //         console.log(element);
@@ -32,6 +29,6 @@ var Word = function () {
     // }
 };
 
-// var gameWord = new Word(currentWord);
+var gameWord = new Word(currentWord);
 
-// console.log("Here is the gameword constructor " + gameWord.letters[1]);
+console.log("Here is the gameword constructor " + gameWord.letters[1].character);
