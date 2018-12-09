@@ -1,9 +1,9 @@
 // This constructor will be able to either display an underlying character or a blank placeholder, depending on whether or not the user has guessed the letter. 
 
 var userGuess = process.argv[2];
-// console.log(userGuess);
+console.log("This letter is connected");
 
-function Letter (char) {
+function Letter(char) {
 // Holds a string to store the correct character for the letter
     this.character = char;
 // A boolean value that stores whether that letter has been guessed yet
@@ -28,6 +28,7 @@ function Letter (char) {
         }
     }
 };
+module.exports=Letter;
 
 var B = new Letter("b");
 
