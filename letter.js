@@ -13,20 +13,21 @@ function Letter(char) {
         if (this.letterIsRight) {
             console.log(" Correct Letter " + this.character);
             console.log("User guess " + userGuess);
-        } else {
-            console.log("-");
-            console.log(" Correct Letter " + this.character);
-            console.log(" Correct Letter " + this.letterIsRight);
-            console.log(" Correct Letter " + userGuess);
+            return this.character
         }
-    }
+            return "_";
+            // console.log(" Correct Letter " + this.character);
+            // console.log(" Correct Letter " + this.letterIsRight);
+            // console.log(" Correct Letter " + userGuess);
+        
+    };
 // Checks user guess against the underlying character, updating the stored boolean value to true
     this.checkLetter = function(userGuess) {
         if (this.character === userGuess) {
             this.letterIsRight = true;
             this.showChar();
         }
-    }
+    };
 };
 module.exports=Letter;
 
